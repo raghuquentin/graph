@@ -28,6 +28,13 @@ public class Vertex {
         return isVisited;
     }
 
+    @Override
+    public String toString() {
+        return "Vertex{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
     public void setVisited(boolean visited) {
         isVisited = visited;
     }

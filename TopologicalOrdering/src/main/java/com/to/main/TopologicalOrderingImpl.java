@@ -10,11 +10,16 @@ public class TopologicalOrderingImpl {
     }
     public void dfs(Vertex vertex){
         vertex.setVisited(true);
-        System.out.println(vertex);
+
         for (Vertex v:vertex.getAdjecencyList()){
             if(!v.isVisited()){
                 dfs(v);
             }
         }
+
+        stack.push(vertex);
+    }
+    public Stack getVertex(){
+        return this.stack;
     }
 }
